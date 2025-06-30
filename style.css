@@ -6,18 +6,31 @@
 } 
 
 body{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    min-height: 100vh;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.up{
+    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: blueviolet;
+    text-align: center;
+    padding-bottom: 100px;
 }
 
-.container{
+.down{
+    
     width: 690px;
     background: white;
     border-radius: 7px;
     padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wrapper{
@@ -94,7 +107,7 @@ body{
     cursor: pointer;
 }
 
-.container button{
+.down button{
     width: 100%;
     padding: 14px;
     margin-top: 20px;
@@ -105,4 +118,53 @@ body{
     font-size: 17px;
     border-radius: 5px;
     background: rgb(119, 9, 221);
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 40px;
+}
+
+footer {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+
+/* Animation keyframes */
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to heading */
+.up h1 {
+  animation: fadeInSlideDown 1.5s ease-out;
+}
+
+/* Apply animation to translator container */
+.down {
+  animation: fadeInUp 1.5s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
 }
